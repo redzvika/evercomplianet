@@ -5,10 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>Investigator</groupId>
-    <artifactId>test.Loomsystems</artifactId>
+    <artifactId>everc</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <log4j2.version>2.13.3</log4j2.version>
         <lombolk.version>1.16.16</lombolk.version>
         <apache-commons-codec.version>1.13</apache-commons-codec.version>
@@ -16,27 +18,14 @@
         <junit-jupiter.version>5.2.0</junit-jupiter.version>
     </properties>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
     <dependencies>
 
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>${lombolk.version}</version>
+            <version>1.18.20</version>
             <scope>provided</scope>
         </dependency>
-
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
@@ -96,4 +85,18 @@
         </dependency>
 
     </dependencies>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
